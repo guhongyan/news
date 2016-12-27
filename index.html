@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>首页</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="./css/aui-iconfont.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="./css/aui.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-accordion.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-calendar.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-slide.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-calendar-slide.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-flex.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-list-swipe.css" media="all" />
+    <script type="text/javascript" src="./script/aui-accordion.js">
+    </script>
+    <script type="text/javascript" src="./script/aui-tap.js" >
+    </script>
+    <script type="text/javascript" src="./script/aui-slide.js">
+    </script>
+    <script type="text/javascript">
+      var isfunctionclick = new Date().getTime();
+      var initappready = true;
+      var AppDomain = 'DEVSERVER';
+      var AppCtrlUrl = '/index.php/';
+      var initappready = true;
+    </script>
+    <script type="text/javascript" src="./script/api.js" >
+    </script>
+    <script type="text/javascript" src="./script/apiex.js" >
+    </script>
+    <script type="text/javascript" src="./script/functions.js" >
+    </script>
+    <link href = "//cdn.bootcss.com/Swiper/3.0.8/css/swiper.min.css" rel = "stylesheet">
+    <script src = "//cdn.bootcss.com/Swiper/3.0.8/js/swiper.min.js" >
+    </script>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.8.2/jquery.min.js">
+    </script>
+    <style type="text/css"> 
+      .xpjc-layout-footer{
+        height: 55px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="xpjc-layout-header">
+    </div>
+    <div>
+      <header class="aui-bar aui-bar-nav aui-bar-danger">
+        
+        <div class="aui-title flash animated">
+          首页
+        </div>
+        <a class="aui-pull-right"> 
+          <span class="aui-iconfont aui-icon-my" tapmode onclick="openmywin('./html/main.html');return false;">
+          </span> 
+        </a> 
+      </header>
+      <div class="aui-searchbar-wrap">
+        <div class="aui-searchbar aui-border-radius" tapmode="">
+          <i class="aui-iconfont aui-icon-search"> 
+          </i> 
+          <div class="aui-searchbar-text">
+            请输入搜索内容 
+          </div>
+          <div class="aui-searchbar-input">
+            <form action="?">
+              <input type="text" placeholder="请输入搜索内容" name="" value="">
+            </form>
+          </div>
+          <i class="aui-iconfont aui-icon-roundclosefill" tapmode=""> 
+          </i> 
+        </div>
+        <div class="aui-searchbar-cancel aui-text-info" tapmode="">
+          取消 
+        </div>
+        <script type="text/javascript" src="./script/jquery-2.1.4.min.js"></script>
+        <script >
+          $(".aui-searchbar").on("click", function (e) {
+            $(".aui-searchbar-wrap").addClass("focus");
+            $('.aui-searchbar-input input').focus();
+          });
+          $(".aui-searchbar-input form").on("submit", function () {
+            var content = $(this).find("input").val();
+          });
+          $(".aui-icon-roundclosefill").on("click", function () {
+            $(".aui-searchbar-input form input").val("");
+          });
+          $(".aui-searchbar-cancel").on("click", function () {
+            $(".aui-searchbar-input form input").val("");
+            $('.aui-searchbar-wrap.focus').removeClass("focus");
+            $('.aui-searchbar-input input').blur();
+          });
+          addApiReady(function () {
+          });
+        </script>
+      </div>
+      <div class="swiper-container swiper-container-horizontal" style=" height: 160px;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-slide-active" style="background-image: url(&quot;'./image/49.png'&quot;); background-size: 100%; height: 160px; width: 320px;">
+          </div>
+          <div class="swiper-slide swiper-slide-next" style="background-image: url(&quot;'./image/48.png'&quot;); background-size: 100%; height: 160px; width: 320px;">
+          </div>
+          <div class="swiper-slide" style="background-image: url(&quot;'./image/47.png'&quot;); background-size: 100%; height: 160px; width: 320px;">
+          </div>
+        </div>
+        <div class="swiper-pagination swiper-pagination-clickable">
+          <span class="swiper-pagination-bullet swiper-pagination-bullet-active">
+          </span>
+        </div>
+
+        <!-- <script >
+          var swiper = new Swiper('.swiper-container', {
+            pagination : '.swiper-pagination', paginationClickable : true });
+        </script> -->
+      </div>
+      <ul class="aui-list-view">
+        <li class="aui-list-view-cell aui-img" style="display: list-item;">
+          <div class="aui-swipe-handle">
+            <img class="aui-img-object aui-pull-left" src="./image/demo2.png">
+            <div class="aui-img-body">
+              滑动列表菜单 
+              <p>
+                按钮数量可以根据需求任何添加，滑动菜单支持aui所有列表项
+              </p>
+            </div>
+          </div>
+          <div class="aui-swipe-right-btn aui-bg-danger">
+            <i class="aui-iconfont aui-icon-delete">
+            </i>
+          </div>
+          <div class="aui-swipe-right-btn aui-bg-warning">
+            <i class="aui-iconfont aui-icon-favor">
+            </i>
+          </div>
+          <div class="aui-swipe-right-btn aui-bg-primary">
+            <i class="aui-iconfont aui-icon-comment">
+            </i>
+          </div>
+        </li>
+        <li class="aui-list-view-cell aui-img">
+          <div class="aui-swipe-handle">
+            <img class="aui-img-object aui-pull-left" src="./image/demo3.png">
+            <div class="aui-img-body">
+              滑动列表菜单 
+              <p>
+                按钮数量可以根据需求任何添加
+              </p>
+            </div>
+          </div>
+          <div class="aui-swipe-right-btn aui-bg-warning">
+            <i class="aui-iconfont aui-icon-delete">
+            </i>
+          </div>
+          <div class="aui-swipe-right-btn aui-bg-danger">
+            <i class="aui-iconfont aui-icon-favor">
+            </i>
+          </div>
+          <div class="aui-swipe-right-btn aui-bg-success">
+            <i class="aui-iconfont aui-icon-comment">
+            </i>
+          </div>
+        </li>
+        <li class="aui-list-view-cell aui-img">
+          <div class="aui-swipe-handle">
+            <img class="aui-img-object aui-pull-left" src="./image/demo4.png">
+            <div class="aui-img-body">
+              滑动列表菜单 
+              <p>
+                按钮数量可以根据需求任何添加，滑动菜单支持aui所有列表项
+              </p>
+            </div>
+          </div>
+          <div class="aui-swipe-right-btn aui-bg-danger">
+            <i class="aui-iconfont aui-icon-delete">
+            </i>
+          </div>
+          <div class="aui-swipe-right-btn aui-bg-info">
+            <i class="aui-iconfont aui-icon-favor">
+            </i>
+          </div>
+          <div class="aui-swipe-right-btn aui-bg-success">
+            <i class="aui-iconfont aui-icon-comment">
+            </i>
+          </div>
+        </li>
+        <li class="aui-list-view-cell aui-img">
+          <div class="aui-swipe-handle">
+            <img class="aui-img-object aui-pull-left" src="./image/demo5.png">
+            <div class="aui-img-body">
+              滑动列表菜单 
+              <p>
+                按钮数量可以根据需求任何添加
+              </p>
+            </div>
+          </div>
+          <div class="aui-swipe-right-btn aui-bg-danger">
+            <i class="aui-iconfont aui-icon-delete">
+            </i>
+          </div>
+          <div class="aui-swipe-right-btn aui-bg-info">
+            <i class="aui-iconfont aui-icon-favor">
+            </i>
+          </div>
+          <div class="aui-swipe-right-btn aui-bg-success">
+            <i class="aui-iconfont aui-icon-comment">
+            </i>
+          </div>
+        </li>
+        <link rel="stylesheet" type="text/css" href="./css/aui-list-swipe.css">
+        <script src="./script/aui-list-swipe.js">
+        </script>
+        <script >
+          var swipe = new ListSwipe();
+          function showMsg(el) {
+            if (!el.classList.contains("aui-swipe-selected")) {
+              api.alert({
+                title: '提示消息', msg: '正常点击操作' });
+            }
+          }
+        </script>
+      </ul>
+    </div>
+    <div class="xpjc-layout-footer">
+    </div>
+    <script type="text/javascript">
+      addApiReady(function () {
+        api.parseTapmode();
+      });
+      window.xpjcDomReady();
+      apiready = function () {
+        window.xpjcApiReady();
+      };
+    </script>
+  </body>
+</html>

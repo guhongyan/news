@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>新建窗体
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="../css/aui-iconfont.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-accordion.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-calendar.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-slide.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-calendar-slide.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-flex.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-list-swipe.css" media="all" />
+    <script type="text/javascript" src="../script/aui-accordion.js">
+    </script>
+    <script type="text/javascript" src="../script/aui-tap.js" >
+    </script>
+    <script type="text/javascript" src="../script/aui-slide.js">
+    </script>
+    <script type="text/javascript">
+      var isfunctionclick = new Date().getTime();
+      var initappready = true;
+      var AppDomain = 'DEVSERVER';
+      var AppCtrlUrl = '/index.php/';
+      var initappready = true;
+    </script>
+    <script type="text/javascript" src="../script/api.js" >
+    </script>
+    <script type="text/javascript" src="../script/apiex.js" >
+    </script>
+    <script type="text/javascript" src="../script/functions.js" >
+    </script>
+    <link href = "//cdn.bootcss.com/Swiper/3.0.8/css/swiper.min.css" rel = "stylesheet">
+    <script src = "//cdn.bootcss.com/Swiper/3.0.8/js/swiper.min.js" >
+    </script>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.8.2/jquery.min.js">
+    </script>
+    <style type="text/css"> 
+      .xpjc-layout-footer{
+        height: 55px;
+      }
+    </style>
+  </head>
+  <body>
+   <!--  <div class="xpjc-layout-header">
+    </div>
+    <div> -->
+      <header class="aui-bar aui-bar-nav aui-bar-danger">
+       <!--  <a class="aui-pull-left"> 
+          <span class="aui-iconfont aui-icon-left">
+          </span> 
+        </a>  -->
+        <!-- <a class="aui-pull-left"> 
+          <span class="aui-iconfont aui-icon-location">
+          </span> 
+        </a>  -->
+        <div class="aui-title">
+          注册
+        </div>
+        <a class="aui-pull-right"> 
+          <span class="aui-iconfont aui-icon-my" tapmode onclick="openmywin('login.html');return false;">
+          </span> 
+        </a> 
+      </header>
+      <div class="aui-input-row aui-primary">
+        <label class="aui-input-addon">
+          账户
+        </label>
+        <input type="text" class="aui-input xpjc-edit-text" value="" placeholder="输入">
+        <i class="aui-input-addon aui-iconfont aui-icon-roundcheckfill">
+        </i> 
+      </div>
+      <div class="aui-input-row aui-primary">
+        <label class="aui-input-addon">
+          密码
+        </label>
+        <input type="password" class="aui-input xpjc-edit-text" value="" placeholder="输入">
+        <i class="aui-input-addon aui-iconfont aui-icon-roundcheckfill">
+        </i> 
+      </div>
+      <div class="aui-btn aui-btn-info">
+        <span tapmode onclick="openmywin('login.html');return false;">注册
+        </span> 
+      </div>
+    </div>
+    <style type="text/css">
+    	.aui-btn-info{
+    		margin-top: 10px;
+    		margin-left: 130px;
+    	}
+    </style>
+    <div class="xpjc-layout-footer">
+    </div>
+    <script type="text/javascript">
+      addApiReady(function () {
+        api.parseTapmode();
+      }
+                 );
+      window.xpjcDomReady();
+      apiready = function () {
+        window.xpjcApiReady();
+      };
+    </script>
+  </body>
+</html>
